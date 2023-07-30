@@ -39,3 +39,13 @@
 	</br>MyDelegate1 myDelegate1 = MyMethod;
 	</br>MyDelegate2 myDelegate2 = MyMethod;
 </br>}
+
+
+<h1></h1>
+</br>contravariance;
+</br>//create 2 delegates used to reference a method used for logging information about a car both delegate definitions will not return values:
+</br>delegate void LoICECarDetailsDel(ICECar car);
+</br>delegate void LogEVCarDetailsDel(EVCar car);
+</br>*static void LogCarDetails{
+</br>	//method code
+</br>}
