@@ -5,8 +5,22 @@ namespace CovarianceAndContravarianceDelegateExample
 {
     class Program
     {
+        delegate Car CarFactoryDel(int id, string name);
         static void Main(string[] args)
         {
+            //ICE Car
+            CarFactoryDel carFactoryDel = CarFactory.ReturnICECar;
+            Car iceCar = carFactoryDel(1,"Audi R8");
+            Console.WriteLine($"Object type: {iceCar.GetType()}");
+            Console.WriteLine($"Car Details: {iceCar.GetCarDetails()}");
+            
+            //EV Car
+            carFactoryDel = CarFactory.ReturnEVCar;
+            Car evCar = carFactoryDel(2, "Tesla Model-3"); 
+            Console.WriteLine();
+            Console.WriteLine($"Object type: {evCar.GetType()}");
+            Console.WriteLine($"Car Details: {evCar.GetCarDetails}");
+            Console.ReadKey();
 
         }
         
